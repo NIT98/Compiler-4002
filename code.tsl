@@ -1,0 +1,4 @@
+fc example1(a : array) -> number : 
+{
+    return -1;
+}

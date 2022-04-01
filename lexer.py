@@ -35,7 +35,7 @@ class LexerTS:
 
         if c.isalnum():
             return self.iden()
-        if c.isalnum():
+        if c.isnumeric():
             return self.num()
         else:
             return self.special()
@@ -64,22 +64,14 @@ class LexerTS:
         return t
 
     def num(self):
-        c = self.nextc()
-        t = ''
-        while c.isnumeric():
-            t += c
-            c = self.nextc()
-
-        if t:
-            self.prevseek()
-
-        return t
+        return None
 
     def special(self):
         c = self.nextc()
 
-        # if c in [':','(',')','{','}']:
+        # if c in [':','(',')','{']:
         #     return c
+
         if c == '-':
             t = c
             c = self.nextc()
@@ -90,8 +82,6 @@ class LexerTS:
 
             return t
         if c == '{':
-            return c
-        if c == '}':
             return c
         if c == '(':
             return c

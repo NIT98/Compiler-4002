@@ -1,4 +1,4 @@
-fc example1(a : array) -> number : 
+fc example1(a : array) -> none : 
 {
-    return -1;
+    return;
 }

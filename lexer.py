@@ -64,7 +64,7 @@ class LexerTS:
         return t
 
     def num(self):
-        return None
+        pass
 
     def special(self):
         c = self.nextc()

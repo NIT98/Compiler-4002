@@ -40,6 +40,9 @@ class LexerTS:
         else:
             return self.special()
 
+    def comment(self):
+        pass
+
     def skipwspace(self):
         c = ' '
         while c.isspace():

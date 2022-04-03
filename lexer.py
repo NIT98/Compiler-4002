@@ -23,10 +23,7 @@ class LexerTS:
         return pos
 
     def getToken(self):
-        pos = self.file.tell()
-        t = self.droptoken(self.file)
-        self.file.seek(pos, 0)
-        return t
+        pass
 
     def dropToken(self):
         self.skipwspace()
